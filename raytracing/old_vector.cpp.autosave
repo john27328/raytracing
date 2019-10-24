@@ -1,0 +1,34 @@
+#include "vector.h"
+
+template<typename T,int N>
+Vector<T, N>::Vector()
+{
+    for(int i = 0; i < N; i++)
+        _mas[i] = 0;
+}
+
+template<typename T, int N>
+T &Vector<T, N>::operator[](int i){
+    return _mas[i];
+}
+
+template<typename T, int N>
+T Vector<T, N>::len() const
+{
+    T r2 = 0;
+    for (auto & i: _mas){
+        r2 += pow(i, 2);
+    }
+    return sqrt(r2);
+}
+
+template<typename T, int N>
+T Vector<T, N>::operator *(Vector<T, N> vec2)
+{
+    T s = 0;
+    for(int i = 0; i < N; i++){
+        s += _mas[i] * vec2[i];
+    }
+    return s;
+}
+
