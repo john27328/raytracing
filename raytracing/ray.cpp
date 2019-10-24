@@ -20,5 +20,6 @@ void Ray<T, N>::setVector(const Vector<T, N> &point, const Vector<T, N> &vec)
 template<typename T, int N>
 T Ray<T, N>::traseLen(EdgeList<T, N> &list)
 {
-
+    new Ray = *this;
+    //доделать
 }
