@@ -10,7 +10,7 @@ ShaderTransparent::ShaderTransparent(ShaderTransparent &shader):
         _dis = new NormalDistribution(*shader._dis);
 }
 
-ShaderTransparent ::ShaderTransparent (Edge *edge,
+ShaderTransparent ::ShaderTransparent (old_Edge *edge,
                                        double refractiveIndexIn, double refractiveIndexOut,
                                        double FWHMDeviationOfTheNormal):
     Shader(edge),

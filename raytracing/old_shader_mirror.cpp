@@ -6,7 +6,7 @@ ShaderMirror::ShaderMirror()
 
 }
 
-ShaderMirror::ShaderMirror(Edge *edge):
+ShaderMirror::ShaderMirror(old_Edge *edge):
     Shader(edge)
 {
 }

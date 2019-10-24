@@ -1,6 +1,6 @@
 #include "old_raytracing.h"
 
-RayTracing::RayTracing(EdgeList *edgeList, RayList *rayList)
+RayTracing::RayTracing(oldEdgeList *edgeList, RayList *rayList)
 {
     _edgeList = edgeList;
     _rayList = rayList;

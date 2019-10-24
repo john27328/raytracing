@@ -7,7 +7,7 @@ class ShaderTransparent: public Shader
 {
 public:
     ShaderTransparent(ShaderTransparent &shader);
-    ShaderTransparent(Edge *edge, double refractiveIndexIn, double refractiveIndexOut,
+    ShaderTransparent(old_Edge *edge, double refractiveIndexIn, double refractiveIndexOut,
                        double FWHMDeviationOfTheNormal);
     ~ShaderTransparent();
     old_Ray intersectionRayLen(const old_Ray &rayIn) const override;

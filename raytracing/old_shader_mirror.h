@@ -6,7 +6,7 @@ class ShaderMirror: public Shader
 {
 public:
     ShaderMirror();
-    ShaderMirror(Edge *edge);
+    ShaderMirror(old_Edge *edge);
     ShaderMirror(const ShaderMirror &shader);
     old_Ray intersectionRayLen(const old_Ray &rayIn) const override;
     ShaderMirror *clone() override;

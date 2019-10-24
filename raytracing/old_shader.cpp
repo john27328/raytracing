@@ -5,7 +5,7 @@ Shader::Shader()
 
 }
 
-Shader::Shader(Edge *edge):
+Shader::Shader(old_Edge *edge):
     _edge(edge)
 {
 
@@ -17,7 +17,7 @@ void Shader::draw(QPainter *painter, Screen *screen)
     _edge->draw(painter, screen);
 }
 
-Edge *Shader::edge()
+old_Edge *Shader::edge()
 {
     return _edge;
 }
@@ -34,7 +34,7 @@ void Shader::moving(Point localCenter, Point shift, Angle rotation)
         _edge->moving(localCenter, shift, rotation);
 }
 
-Edge *Shader::getEdge()
+old_Edge *Shader::getEdge()
 {
     if (_edge)
         return _edge->getEdge();

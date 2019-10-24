@@ -2,19 +2,19 @@
 #define SHADER_H
 #include "old_edge.h"
 
-class Shader: public Edge
+class Shader: public old_Edge
 {
 public:
     Shader();
-    Shader(Edge *edge);
+    Shader(old_Edge *edge);
     old_Ray intersectionRayLen(const old_Ray &rayIn) const override = 0;
     void draw(QPainter *painter, Screen *screen) override;
-    Edge *edge();
+    old_Edge *edge();
     void moving(Point shift, Angle rotation) override;
     void moving(Point localCenter, Point shift, Angle rotation) override;
-    Edge *getEdge() override;
+    old_Edge *getEdge() override;
 protected:
-    Edge *_edge = nullptr;
+    old_Edge *_edge = nullptr;
 };
 
 #endif // SHADER_H

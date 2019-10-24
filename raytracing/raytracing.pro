@@ -20,8 +20,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     distribution.cpp \
     drawoptics.cpp \
+    edge.cpp \
     main.cpp \
-    new_ray.cpp \
     normal_distribution.cpp \
     normal_spectrum.cpp \
     old_angle.cpp \
@@ -41,6 +41,7 @@ SOURCES += \
     old_shader_transparent.cpp \
     old_vcsel_source.cpp \
     qcustomplot.cpp \
+    ray.cpp \
     screen.cpp \
     source.cpp \
     uniform_int_distribution.cpp \
@@ -51,6 +52,7 @@ HEADERS += \
     const.h \
     distribution.h \
     drawoptics.h \
+    edge.h \
     normal_distribution.h \
     normal_spectrum.h \
     old_angle.h \

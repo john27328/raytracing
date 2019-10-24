@@ -29,8 +29,8 @@ class DrawOptics : public QWidget
     Q_OBJECT
 public:
     DrawOptics(QWidget *parent = nullptr);
-    DrawOptics(Screen *screen, EdgeList *edgeList, RayList *rayList, QWidget *parent = nullptr);
-    void set(Screen *screen, EdgeList *edgeList, RayList *rayList);
+    DrawOptics(Screen *screen, oldEdgeList *edgeList, RayList *rayList, QWidget *parent = nullptr);
+    void set(Screen *screen, oldEdgeList *edgeList, RayList *rayList);
     ~DrawOptics();
     virtual void paintEvent(QPaintEvent*);
 
@@ -41,7 +41,7 @@ public slots:
 private:
     QPainter *painter = nullptr;
     Screen *_screen = nullptr;
-    EdgeList *_edgeList = nullptr;
+    oldEdgeList *_edgeList = nullptr;
     RayList *_rayList = nullptr;
 };
 

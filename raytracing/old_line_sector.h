@@ -2,7 +2,7 @@
 #define LINESECTOR_H
 #include "old_edge.h"
 
-class LineSector : public Edge
+class LineSector : public old_Edge
 {
 public:
     LineSector();

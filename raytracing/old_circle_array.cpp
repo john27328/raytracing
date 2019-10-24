@@ -6,12 +6,12 @@ CircleArray::CircleArray()
 
 }
 
-CircleArray::CircleArray(Edge *edge, int n, double radius, Point center, Angle phi)
+CircleArray::CircleArray(old_Edge *edge, int n, double radius, Point center, Angle phi)
 {
     if (n < 1) n = 1;
     Angle dAlpha = 360_gr / n;
     for (int i = 0; i < n; i++){
-        EdgeSPtr tmp(edge->clone());
+        oldEdgeSPtr tmp(edge->clone());
         Angle rotation = i * dAlpha + phi;
         Point shift(radius, rotation);
         tmp->moving(shift + center, rotation);
@@ -19,12 +19,12 @@ CircleArray::CircleArray(Edge *edge, int n, double radius, Point center, Angle p
     }
 }
 
-CircleArray::CircleArray(Edge *edge, Point localCenter, int n, double radius, Point center, Angle phi)
+CircleArray::CircleArray(old_Edge *edge, Point localCenter, int n, double radius, Point center, Angle phi)
 {
     if (n < 1) n = 1;
     Angle dAlpha = 360_gr / n;
     for (int i = 0; i < n; i++){
-        EdgeSPtr tmp(edge->clone());
+        oldEdgeSPtr tmp(edge->clone());
         Angle rotation = i * dAlpha + phi;
         Point shift(radius, rotation);
         tmp->moving(localCenter, shift + center, rotation);
@@ -32,32 +32,32 @@ CircleArray::CircleArray(Edge *edge, Point localCenter, int n, double radius, Po
     }
 }
 
-CircleArray::CircleArray(EdgeList list, int n, double radius, Point center, Angle phi)
+CircleArray::CircleArray(oldEdgeList list, int n, double radius, Point center, Angle phi)
 {
     if (n < 1) n = 1;
     Angle dAlpha = 360_gr / n;
     for (int i = 0; i < n; i++){
         Angle rotation = i * dAlpha + phi;
         Point shift(radius, rotation);
-        EdgeSPtr tmp;
+        oldEdgeSPtr tmp;
         for (auto&j: list){
-            tmp = EdgeSPtr(j->clone());
+            tmp = oldEdgeSPtr(j->clone());
             tmp->moving(shift + center, rotation);
             _list.push_back(tmp);
         }
     }
 }
 
-CircleArray::CircleArray(EdgeList list, Point localCenter, int n, double radius, Point center, Angle phi)
+CircleArray::CircleArray(oldEdgeList list, Point localCenter, int n, double radius, Point center, Angle phi)
 {
     if (n < 1) n = 1;
     Angle dAlpha = 360_gr / n;
     for (int i = 0; i < n; i++){
         Angle rotation = i * dAlpha + phi;
         Point shift(radius, rotation);
-        EdgeSPtr tmp;
+        oldEdgeSPtr tmp;
         for (auto&j: list){
-            tmp = EdgeSPtr(j->clone());
+            tmp = oldEdgeSPtr(j->clone());
             tmp->moving(localCenter, shift + center, rotation);
         }
         _list.push_back(tmp);

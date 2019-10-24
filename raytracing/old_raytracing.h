@@ -7,13 +7,13 @@
 class RayTracing
 {
 public:
-    RayTracing(EdgeList *edgeList, RayList *rayList = nullptr);
+    RayTracing(oldEdgeList *edgeList, RayList *rayList = nullptr);
     void trace(const old_Ray ray);
 
 private:
     bool _draw;
 //    Screen *_screen = nullptr;
-    EdgeList *_edgeList = nullptr;
+    oldEdgeList *_edgeList = nullptr;
     RayList *_rayList = nullptr;
     int maxSegments = CNST::maxRaySegments;
 };

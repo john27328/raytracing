@@ -1,16 +1,16 @@
 #include "old_edge.h"
 
-Edge::Edge()
+old_Edge::old_Edge()
 {
 
 }
 
-Edge::~Edge()
+old_Edge::~old_Edge()
 {
 
 }
 
-Edge *Edge::getEdge()
+old_Edge *old_Edge::getEdge()
 {
     return this;
 }

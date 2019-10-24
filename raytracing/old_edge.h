@@ -14,24 +14,25 @@
 
 using ReflactionBool = bool;
 
-class Edge
+class old_Edge
+
 {
 public:
-    Edge();
-    virtual ~Edge();
+    old_Edge();
+    virtual ~old_Edge();
 
     virtual old_Ray intersectionRayLen(old_Ray const &rayIn) const = 0;
     virtual void draw(QPainter *painter, Screen * screen) = 0;
     virtual void moving(Point shift, Angle rotation) = 0;
     virtual void moving(Point localCenter, Point shift, Angle rotation) = 0;
-    virtual Edge* clone() = 0;
-    virtual Edge *getEdge();
+    virtual old_Edge* clone() = 0;
+    virtual old_Edge *getEdge();
 protected:
     QBrush _brush;
 };
 
-using EdgeSPtr = std::shared_ptr<Edge>;
-using EdgeList = std::vector<EdgeSPtr>;
+using oldEdgeSPtr = std::shared_ptr<old_Edge>;
+using oldEdgeList = std::vector<oldEdgeSPtr>;
 
 
 #endif // EDGE_H

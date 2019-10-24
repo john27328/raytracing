@@ -7,7 +7,7 @@ DrawOptics::DrawOptics(QWidget *parent)
     _rayList = nullptr;
 }
 
-DrawOptics::DrawOptics(Screen *screen, EdgeList *edgeList, RayList *rayList, QWidget *parent): QWidget(parent)
+DrawOptics::DrawOptics(Screen *screen, oldEdgeList *edgeList, RayList *rayList, QWidget *parent): QWidget(parent)
 {
     painter = new QPainter;
     setMinimumSize(300,300);
@@ -17,7 +17,7 @@ DrawOptics::DrawOptics(Screen *screen, EdgeList *edgeList, RayList *rayList, QWi
 
 }
 
-void DrawOptics::set(Screen *screen, EdgeList *edgeList, RayList *rayList)
+void DrawOptics::set(Screen *screen, oldEdgeList *edgeList, RayList *rayList)
 {
     painter = new QPainter;
     setMinimumSize(300,300);

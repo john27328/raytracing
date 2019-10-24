@@ -4,7 +4,7 @@
 #include <math.h>
 #include "const.h"
 
-class Circle : public Edge
+class Circle : public old_Edge
 {
 public:
     //Circle(Point center, double r, QBrush brush);
