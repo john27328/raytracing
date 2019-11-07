@@ -3,6 +3,7 @@
 
 #include "old_point.h"
 #include "QPoint"
+#include <memory>
 
 class Screen
 {
@@ -25,5 +26,6 @@ protected:
     int _resolutionX, _resolutionY;
     Point _point1, _point2;
 };
+using ScreenSPtr = std::shared_ptr<Screen>;
 
 #endif // SCREEN_H
