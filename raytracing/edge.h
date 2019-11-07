@@ -11,9 +11,9 @@ class Edge
 public:
     Edge();
     virtual ~Edge();
-    virtual Vector<T, N> intersectionRayLen(const Vector<T, N> &point,
-                                            const Vector<T, N> &vec) const = 0;
-    virtual void moving(Vector<T, N> shift, Vector<T, N> rotation) = 0;
+    virtual double intersectionRayLen(const Vector<T, N> &point,
+                                            const Vector<T, N> &vec, Vector<T, N> &out) const = 0;
+    virtual void moving(Vector<T, N> shift, Vector<T, N> rotationXYZ) = 0;
     virtual void clone() const = 0;
 
 };
